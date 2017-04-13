@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'app works!';
+  title: string = 'Secret Santa Application';
+  description: string = 'Below is a list of the secret santa pairings.';
 }
