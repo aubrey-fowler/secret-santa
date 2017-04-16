@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title: string = 'Secret Santa Application';
-  description: string = 'Below is a list of the secret santa pairings.';
+  title = 'Secret Santa Application';
+  description = 'Below is a list of the secret santa pairings.';
 }

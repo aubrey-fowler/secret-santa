@@ -1,28 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PairingsService } from './pairings.service';
 import { Participant } from './participant';
 
 @Component({
-  selector: 'pm-pairings',
+  selector: 'app-pairings',
   templateUrl: './pairings.component.html',
   styleUrls: ['./pairings.component.css'],
   providers: [ PairingsService ]
 })
 
-export class PairingsComponent {
+export class PairingsComponent implements OnInit {
 
-	pairings: Object[];
+    pairings: Object[];
 
-	constructor(private _pairingsService: PairingsService) {}
+    constructor(private _pairingsService: PairingsService) {}
 
-	ngOnInit(): void {
-		this._pairingsService.getPairings().subscribe(
-			data => this.pairings = data
-		);
-	}
+    ngOnInit(): void {
+        this._pairingsService.getPairings().subscribe(
+            data => this.pairings = data
+        );
+    }
 
-	onShuffleClick() {
-		this.pairings = this._pairingsService.onShuffle();
-	}
+    onShuffleClick() {
+        this.pairings = this._pairingsService.onShuffle();
+    }
 
 }
