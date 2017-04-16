@@ -1,18 +1,22 @@
 <div *ngIf="pairings">
 	<div class="row" *ngFor="let pair of pairings">
 		<div class="wall clickableWall col-sm-2" data-toggle="collapse" attr.data-target="#toggle-buyer-{{pair.buyer.guid}}">
-			<p>{{ pair.buyer.name.first }} {{ pair.buyer.name.last }}</p>
+			<p class="boldFont">{{ pair.buyer.name.first }} {{ pair.buyer.name.last }}</p>
 			<div attr.id="toggle-buyer-{{pair.buyer.guid}}" class="collapse">
-				<p>{{ pair.buyer.email }} {{ pair.buyer.phone }}</p>
+				<br />
+				<p>&#8226; {{ pair.buyer.email }}</p>
+				<p>&#8226; {{ pair.buyer.phone }}</p>
 			</div>
 		</div>
 		<div class="wall col-sm-1">
-			<p>buys for <span class="glyphicon glyphicon-arrow-right"></span></p>
+			<p class="boldFont">buys for <span class="glyphicon glyphicon-arrow-right"></span></p>
 		</div>
 		<div class="wall clickableWall col-sm-2" data-toggle="collapse" attr.data-target="#toggle-receiver-{{pair.receiver.guid}}">
-			<p>{{ pair.receiver.name.first }} {{ pair.receiver.name.last }}</p>
+			<p class="boldFont">{{ pair.receiver.name.first }} {{ pair.receiver.name.last }}</p>
 			<div attr.id="toggle-receiver-{{pair.receiver.guid}}" class="collapse">
-				<p>{{ pair.receiver.email }} {{ pair.receiver.phone }}</p>
+				<br />
+				<p>&#8226; {{ pair.receiver.email }}</p>
+				<p>&#8226; {{ pair.receiver.phone }}</p>
 			</div>
 		</div>
 	</div>
