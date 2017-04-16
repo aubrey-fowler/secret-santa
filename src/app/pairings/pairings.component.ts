@@ -21,4 +21,8 @@ export class PairingsComponent {
 		);
 	}
 
+	onShuffleClick() {
+		this.pairings = this._pairingsService.onShuffle();
+	}
+
 }

@@ -74,6 +74,12 @@ export class PairingsService {
         return Math.floor(Math.random() * items.length);
     }
 
+    onShuffle(): Object[] {
+        let input = this.shuffle(this._participants);
+        input = this.pairParticipants(input);
+        return input;
+    }
+
     private handleError(error: Response) {
         return Observable.throw(error || 'Server error');
     }

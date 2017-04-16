@@ -1,4 +1,9 @@
 <div *ngIf="pairings">
+
+    <div>
+    	<button type="button" class="btn btn-info" (click)='onShuffleClick()'>Shuffle</button>
+    </div>
+
 	<div class="row" *ngFor="let pair of pairings">
 		<div class="wall clickableWall col-sm-2" data-toggle="collapse" attr.data-target="#toggle-buyer-{{pair.buyer.guid}}">
 			<p class="boldFont">{{ pair.buyer.name.first }} {{ pair.buyer.name.last }}</p>
