@@ -30,4 +30,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Targeted Browsers
 ===============================
 
+[Angular Browser Support](https://angular.io/docs/ts/latest/guide/browser-support.html)
 
+Tested On:
+
+IE 9, 10, 11
+
+Firefox 52.0.2 (32-bit)
+
+Chrome Version 57.0.2987.133 (64-bit)
