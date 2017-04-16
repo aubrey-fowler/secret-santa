@@ -32,11 +32,9 @@ export class PairingsService {
     private pairParticipants(input: Participant[]): Object[] {
 
         let allocatedPairs = [];
-
         let temp = input;
-        temp = this.shuffle(temp);
-
         let i = 0;
+        
         while (i <= temp.length) {
             if (i === temp.length - 1) {
                 let d = {
@@ -56,7 +54,7 @@ export class PairingsService {
             i++;
         }
 
-        return allocatedPairs;
+        return this.shuffle(allocatedPairs);
     }
 
     private shuffle(input: any[]): any[] {

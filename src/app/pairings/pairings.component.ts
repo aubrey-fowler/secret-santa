@@ -5,6 +5,7 @@ import { Participant } from './participant';
 @Component({
   selector: 'pm-pairings',
   templateUrl: './pairings.component.html',
+  styleUrls: ['./pairings.component.css'],
   providers: [ PairingsService ]
 })
 
